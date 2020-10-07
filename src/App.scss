@@ -1,0 +1,122 @@
+// google fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@import "Vars";
+
+//=======================================NORMALIZE
+
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: $header-height 0 0 0;
+    font-family: $body-font;
+    font-size: $normal-font-size;
+    color: $dark-color;
+    line-height: 1.6;
+}
+
+h1,h2,p{
+    margin: 0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: $dark-color;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+//==============================init CLAS CSS
+
+.section{
+    padding: 3rem 0;
+}
+
+.section-title{
+    font-size: $h2-font-size;
+    color: $dark-color;
+    margin: $mb-4 0 $mb-1;
+    text-align: center;
+}
+
+.section-all{
+    display: block;
+    font-size: $small-font-size;
+    font-weight:$font-semi;
+    color: $dark-color-light;
+    text-align: center;
+    margin-bottom: $mb-2;
+}
+
+//==============================================BUTTON
+.button{
+    display: inline-block;
+    background-color: $firts-color;
+    color: $white-color;
+    padding: 1rem;
+    font-size: $small-font-size;
+    font-weight: $font-semi;
+    transition: .3s;
+
+    &:hover{
+        background-color: $firts-color-alt;
+    }
+}
+
+//=============================================LAYOUT
+
+.bd-grid{
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column-gap: 2rem;
+    width: calc(100%-3rem);
+    margin-left: $mb-3;
+    margin-right: $mb-3;
+}
+
+
+//screen more 768px
+@media screen and (min-width:768px){
+
+    $big-font-size:6rem;
+    $h1-font-size:2.25rem;
+    $h2-font-size:1.5rem;
+    $normal-font-size:1rem;
+    $small-font-size:.813rem;
+
+    body{
+        margin: 0;
+    }
+
+    .section-all{
+        margin-bottom: $mb-4;
+    }
+
+}
+
+
+//screen more 1024px
+@media screen and (min-width:1024px){
+
+    .bd-grid{
+        margin-left: auto;
+        margin-right: auto;
+    }
+  
+
+}

@@ -1,0 +1,31 @@
+@import "./../../Vars.scss";
+
+.offer__bg{
+    background: url('/assets/img/offer.jpg') no-repeat center/cover;
+    text-align: center;
+}
+
+.offer__data{
+    padding: 3.5rem .25rem;
+    background:rgba($color: #000000, $alpha: .5);
+    color: $white-color;
+}
+
+.offer__title{
+    font-size: $h1-font-size;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    font-weight: $font-semi;
+}
+
+.offer__description{
+    margin-bottom: $mb-2;
+    letter-spacing: .2rem;
+}
+
+@media screen and (min-width:768px){
+    .offer__data{
+        padding:5rem 0;
+    }
+    
+}

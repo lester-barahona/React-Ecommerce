@@ -1,0 +1,67 @@
+@import "./../../Vars.scss";
+
+.home{
+    background-color: $gray-color;
+}
+
+.home__container{
+    height: calc(100vh - 3rem);
+   
+}
+
+.home__data{
+    padding-top: 6rem;
+}
+
+.home__title{
+    align-self: center;
+    font-size: $big-font-size;
+    line-height: 1;
+    letter-spacing: .5rem;
+    margin-bottom: 4rem;
+    span{
+       font-size: $h1-font-size; 
+    }
+}
+
+.home__img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width:260px;
+}
+
+@media screen and (min-width:768px){
+
+    .home__container{
+        height: 100vh;
+    }
+
+    .home__data{
+        padding: 0;
+        height: max-content;
+        align-self: center;
+    }
+
+    .home__title{
+        line-height: .8;
+        letter-spacing: 1.5rem;
+    }
+
+    .home__img{
+        width: 370px;
+    }
+}
+
+//screen more 1024px
+@media screen and (min-width:1024px){
+
+  .home__data{
+      padding-left: 7rem;
+  }
+
+  .home__img{
+      right: 15%;
+  }
+
+}
