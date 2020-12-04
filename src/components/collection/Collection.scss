@@ -18,6 +18,9 @@
 
 .collection__img{
     width: 100px;
+    &.xl{
+       width: 210px; 
+    }
 }
 
 .collection__title{

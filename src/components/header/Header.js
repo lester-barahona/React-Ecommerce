@@ -1,9 +1,11 @@
 import React,{useState} from 'react'
 import './Header.scss';
+import { useLocation } from 'react-router-dom'
+
 const Header = () => {
 
     const [show,setShow]=useState(false);
-
+    const location=useLocation();
     const showMenu=()=>{
         setShow(!show);
     }
@@ -37,12 +39,14 @@ const Header = () => {
                         <a href="/" className="nav__logo">KUTY</a>
                     </div>
                     <div className={show?'nav__menu show':'nav__menu '} id="nav-menu">
+                        {location.pathname!== '/compras' &&
                         <ul className="nav__list" onClick={activeHandler}>
                             <li className="nav__item"><a href="#home" className="nav__link active" >Home</a></li>
                             <li className="nav__item"><a href="#featured" className="nav__link">Featured</a></li>
                             <li className="nav__item"><a href="#new" className="nav__link">New</a></li>
                             <li className="nav__item"><a href="#suscribed" className="nav__link">Suscribed</a></li>
                         </ul>
+                        }
                     </div>
                     <div>
                         <i className="bx bx-cart nav__cart"></i>

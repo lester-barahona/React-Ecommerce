@@ -8,12 +8,24 @@
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: $gray-color;
     overflow: hidden;
+    min-height: 240px;
 
     &:hover .new__link{
         bottom: 0;
     }
+
+   
+}
+
+.new__img.xl{
+    width: 300px;
+}
+
+.new__img.md{
+    width: 150px;
 }
 
 .new__link{

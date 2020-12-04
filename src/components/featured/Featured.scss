@@ -7,6 +7,7 @@
 
 .featured__product{
     transition: .3s;
+    
     &:hover{
         transform: translateY(-.5rem);
     }
@@ -17,7 +18,9 @@
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: $gray-color;
+    min-height: 280px;
 }
 
 .featured__new{
@@ -28,6 +31,10 @@
     color: $white-color;
     padding: .3rem .75rem;
     font-size: $small-font-size;
+}
+
+.featured__box > img{
+    width:200px;
 }
 
 .faetured__data{

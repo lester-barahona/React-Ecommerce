@@ -1,5 +1,6 @@
 import React from 'react'
 import './Featured.scss';
+import { Link } from 'react-router-dom';
 const Featured = () => {
     return (
         <section className="featured section" id="featured">
@@ -7,18 +8,34 @@ const Featured = () => {
             <a href="/" className="section-all">View All</a>
 
             <div className="featured__container bd-grid">
-                <div className="featured__product">
+            <Link
+                to={
+                    {
+                    pathname:"/compras",
+                    state:{
+                        nombre:'iPhone 12 Pro Max',
+                        precio:950,
+                        descripcion:'iPhone 12 Pro Max',
+                        url:'iphone.png'
+                    }
+                    }
+                }
+                 
+            >
+                 <div className="featured__product">
                     <div className="featured__box">
                         <div className="featured__new">NEW</div>
-                        <img src="assets/img/feature1.png" alt="" className="featured__img"/>
+                        <img src="assets/img/iphone.png" alt="" className="featured__img"/>
                     </div>
                     
                     <div className="faetured__data">
-                        <h3 className="featured__name">Headphone One Black</h3>
-                        <span className="featured__preci">$29</span>
+                        <h3 className="featured__name">iPhone 12 Pro Max</h3>
+                        <span className="featured__preci">$950</span>
                     </div>
 
                 </div>
+            </Link>
+               
                 <div className="featured__product">
                     <div className="featured__box">
                         <div className="featured__new">NEW</div>
